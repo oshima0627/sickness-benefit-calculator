@@ -1,0 +1,208 @@
+.income-comparison {
+  background: var(--color-card);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--spacing-xs);
+}
+
+.comparison-chart {
+  margin-bottom: var(--spacing-lg);
+}
+
+.chart-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.chart-item:last-child {
+  margin-bottom: 0;
+}
+
+.chart-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.label-text {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.label-amount {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.chart-bar {
+  height: 32px;
+  background-color: var(--color-border-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: width 0.8s ease-out;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--spacing-sm);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.current-bar {
+  background: linear-gradient(90deg, var(--color-primary), #1976D2);
+}
+
+.benefit-bar {
+  background: linear-gradient(90deg, var(--color-success), #388E3C);
+}
+
+.chart-percentage {
+  text-align: right;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.comparison-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-section);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.summary-item {
+  text-align: center;
+  padding: var(--spacing-sm);
+}
+
+.summary-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.summary-value {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.summary-value.good {
+  color: var(--color-success);
+}
+
+.summary-value.fair {
+  color: var(--color-warning);
+}
+
+.summary-value.low {
+  color: var(--color-error);
+}
+
+.summary-value.decrease {
+  color: var(--color-error);
+}
+
+.current-breakdown {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+}
+
+.breakdown-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.breakdown-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.breakdown-item.deduction {
+  color: var(--color-error);
+}
+
+.breakdown-item.total {
+  border-top: 2px solid var(--color-primary);
+  padding-top: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.item-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.item-value {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.breakdown-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .chart-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .comparison-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}

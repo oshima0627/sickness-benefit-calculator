@@ -1,0 +1,174 @@
+/**
+ * InputForm コンポーネントのスタイル
+ */
+
+.input-form {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid var(--color-border);
+}
+
+.input-form h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* 必須マーク */
+.required {
+  color: var(--color-error);
+  margin-left: var(--spacing-xs);
+}
+
+/* フォームグループ */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* 入力フィールド */
+.form-group input[type="number"] {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+  text-align: right;
+  font-weight: 600;
+}
+
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(46, 125, 51, 0.2);
+}
+
+.form-group input[type="number"].has-error {
+  border-color: var(--color-error);
+  background-color: #FFF5F5;
+}
+
+/* セレクトフィールド */
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+  text-align: left;
+  font-weight: normal;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(46, 125, 51, 0.2);
+}
+
+.form-group select.has-error {
+  border-color: var(--color-error);
+  background-color: #FFF5F5;
+}
+
+/* ラベル */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+/* ヘルプテキスト */
+.form-help {
+  font-size: var(--font-size-sm);
+  color: #666;
+  margin-top: var(--spacing-xs);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ステータスメッセージ */
+.form-status {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.status-message {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-message.success {
+  color: var(--color-success);
+  background-color: #F1F8E9;
+  border: 1px solid #C8E6C9;
+}
+
+.status-message.info {
+  color: #2E7D33;
+  background-color: #E8F5E8;
+  border: 1px solid #C8E6C9;
+}
+
+/* エラーメッセージのアニメーション */
+.error-message {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* フィールドセット */
+fieldset {
+  background-color: var(--color-white);
+}
+
+legend {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+/* フォーカス時のアクセシビリティ強化 */
+input[type="number"]:focus {
+  box-shadow: 0 0 0 2px rgba(46, 125, 51, 0.2);
+}
+
+/* ハイコントラストモード対応 */
+@media (prefers-contrast: high) {
+  
+  .status-message.success {
+    border: 2px solid var(--color-success);
+  }
+  
+  .status-message.info {
+    border: 2px solid #2E7D33;
+  }
+}
+
+/* プリント時の最適化 */
+@media print {
+  .form-status {
+    display: none;
+  }
+  
+  .input-form {
+    background: white;
+    border: 1px solid #000;
+  }
+}
