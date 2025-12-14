@@ -117,20 +117,7 @@ export default function RootLayout({
               <p className="subtitle">
                 病気・ケガで休職予定の方向け 手取り額シミュレーター
               </p>
-              <HeaderNavigation 
-                targets={[
-                  {
-                    site: 'childcare',
-                    url: 'https://childcare-calculator.nexeed-web.com',
-                    label: '育児休業給付金シミュレーター'
-                  },
-                  {
-                    site: 'maternity',
-                    url: 'https://maternity-allowance-calculator.nexeed-web.com',
-                    label: '出産手当金シミュレーター'
-                  }
-                ]}
-              />
+              <HeaderNavigation currentSite="sickness" />
             </div>
           </header>
 
