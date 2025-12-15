@@ -189,7 +189,7 @@
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .chart-label {
     flex-direction: column;
     align-items: flex-start;

@@ -107,7 +107,6 @@ export default function HomePage() {
       )}
 
       <FAQ />
-
     </div>
   )
 }
