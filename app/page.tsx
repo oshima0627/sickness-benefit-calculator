@@ -9,6 +9,7 @@ import { useState } from 'react'
 import InputForm from './components/InputForm'
 import ResultDisplay from './components/ResultDisplay'
 import FAQ from './components/FAQ'
+import AffiliateBanner from './components/AffiliateBanner'
 import { calculateSickness } from './utils/sicknessCalculator'
 import type { SicknessInput, SicknessResult } from './types'
 
@@ -106,7 +107,11 @@ export default function HomePage() {
         </section>
       )}
 
+      {hasCalculated && <AffiliateBanner />}
+
       <FAQ />
+
+      <AffiliateBanner />
     </div>
   )
 }
