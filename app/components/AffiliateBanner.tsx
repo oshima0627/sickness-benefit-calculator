@@ -17,7 +17,6 @@ export default function AffiliateBanner() {
           className="affiliate-link"
         >
           <img
-            border={0}
             width={336}
             height={280}
             alt="広告"
@@ -26,7 +25,6 @@ export default function AffiliateBanner() {
           />
         </a>
         <img
-          border={0}
           width={1}
           height={1}
           src="https://www12.a8.net/0.gif?a8mat=4AUXWS+FT6F3M+1IRY+1TK1F5"
