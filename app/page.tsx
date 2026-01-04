@@ -107,7 +107,7 @@ export default function HomePage() {
         </section>
       )}
 
-      <AffiliateBanner />
+      {hasCalculated && <AffiliateBanner />}
 
       <FAQ />
 
