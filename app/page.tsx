@@ -110,6 +110,8 @@ export default function HomePage() {
       <AffiliateBanner />
 
       <FAQ />
+
+      <AffiliateBanner />
     </div>
   )
 }
