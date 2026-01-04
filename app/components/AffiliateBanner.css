@@ -1,0 +1,97 @@
+/**
+ * アフィリエイトバナー CSS
+ * モバイル対応、ホバー効果、PRラベル付き
+ */
+
+.affiliate-banner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.affiliate-banner-container:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* PRラベル */
+.pr-label {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  z-index: 1;
+  letter-spacing: 0.5px;
+}
+
+/* バナー本体 */
+.affiliate-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.affiliate-link {
+  display: block;
+  max-width: 100%;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.affiliate-link:hover {
+  opacity: 0.9;
+}
+
+.affiliate-link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* 画像 */
+.affiliate-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-sm);
+}
+
+/* モバイル対応 */
+@media (max-width: 767px) {
+  .affiliate-banner-container {
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) auto;
+  }
+
+  /* 336pxを超える場合は縮小 */
+  .affiliate-banner {
+    max-width: 100%;
+  }
+
+  .affiliate-image {
+    width: 100%;
+    max-width: 336px;
+    height: auto;
+  }
+}
+
+/* 小さい画面でのさらなる調整 */
+@media (max-width: 375px) {
+  .affiliate-banner-container {
+    padding: var(--spacing-sm);
+  }
+}

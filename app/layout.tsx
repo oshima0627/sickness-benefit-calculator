@@ -3,6 +3,7 @@ import './globals.css'
 import { APP_CONFIG, OGP_CONFIG } from './utils/constants'
 import { Analytics } from '@vercel/analytics/next'
 import HeaderNavigation from './components/HeaderNavigation'
+import AffiliateBanner from './components/AffiliateBanner'
 
 export const metadata: Metadata = {
   title: OGP_CONFIG.title,
@@ -153,10 +154,12 @@ export default function RootLayout({
               
               <div className="footer-bottom">
                 <p>
-                  &copy; 2025 傷病手当金シミュレーター. 
+                  &copy; 2025 傷病手当金シミュレーター.
                   データ出典: 厚生労働省
                 </p>
               </div>
+
+              <AffiliateBanner />
             </div>
           </footer>
         </div>
