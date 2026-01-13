@@ -66,6 +66,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const currentYear = new Date().getFullYear()
+
   return (
     <html lang="ja" suppressHydrationWarning={true}>
       <head>
@@ -153,8 +155,7 @@ export default function RootLayout({
               
               <div className="footer-bottom">
                 <p>
-                  &copy; 2025 傷病手当金シミュレーター.
-                  データ出典: 厚生労働省
+                  &copy; {currentYear} Nexeed Lab. All rights reserved.
                 </p>
               </div>
             </div>
