@@ -153,8 +153,7 @@ export default function RootLayout({
               
               <div className="footer-bottom">
                 <p>
-                  &copy; 2025 Nexeed Lab.
-                  データ出典: 厚生労働省
+                  &copy; 2025 Nexeed Lab. All rights reserved.
                 </p>
               </div>
             </div>
