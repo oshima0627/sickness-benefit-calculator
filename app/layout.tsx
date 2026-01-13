@@ -72,7 +72,7 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning={true}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#2196f3" />
+        <meta name="theme-color" content="#2E7D33" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={APP_CONFIG.url} />
