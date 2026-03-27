@@ -117,7 +117,7 @@ export default function RootLayout({
             <div className="container">
               <h1>{APP_CONFIG.title}</h1>
               <p className="subtitle">
-                病気・ケガで休職予定の方向け 手取り額シミュレーター
+                病気で休職予定の方向け 手取り額シミュレーター
               </p>
               <HeaderNavigation currentSite="sickness" />
             </div>
