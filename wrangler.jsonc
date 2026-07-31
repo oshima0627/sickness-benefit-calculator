@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sickness-benefit-calculator",
+  "compatibility_date": "2025-11-01",
+  // 静的アセットのみを配信する Worker（サーバーコードなし）
+  "assets": {
+    "directory": "./out",
+    // 未知のパスは out/404.html を 404 ステータスで返す
+    "not_found_handling": "404-page"
+  }
+}

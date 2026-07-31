@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { APP_CONFIG, OGP_CONFIG } from './utils/constants'
-import { Analytics } from '@vercel/analytics/next'
 import HeaderNavigation from './components/HeaderNavigation'
 
 export const metadata: Metadata = {
@@ -161,7 +160,6 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
-        <Analytics />
       </body>
     </html>
   )
