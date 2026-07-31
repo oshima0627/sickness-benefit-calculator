@@ -58,7 +58,7 @@ Cloudflare 側では「ビルド用の環境変数」として設定してくだ
 
 | 変数名 | 用途 | 例 |
 | --- | --- | --- |
-| `NEXT_PUBLIC_APP_URL` | canonical URL / OGP の URL | `https://sickness-benefit-calculator.nexeed-lab.com` |
+| `NEXT_PUBLIC_APP_URL` | canonical URL / OGP の URL | `https://sickness.nexeed-lab.com` |
 | `NEXT_PUBLIC_GOOGLE_VERIFICATION` | Search Console 所有権確認 | （任意） |
 
 どちらも任意です。未設定でもビルドは通ります。
@@ -69,7 +69,7 @@ Cloudflare 側では「ビルド用の環境変数」として設定してくだ
 
 1. Cloudflare ダッシュボードで対象の Worker（または Pages プロジェクト）を開く
 2. **Settings** → **Domains & Routes** → **Add custom domain**
-3. `sickness-benefit-calculator.nexeed-lab.com` を追加
+3. `sickness.nexeed-lab.com` を追加
 4. `nexeed-lab.com` が Cloudflare のネームサーバーを使っていれば DNS は自動で作成されます
 
 ドメインを変更した場合は `NEXT_PUBLIC_APP_URL` も合わせて更新してください。

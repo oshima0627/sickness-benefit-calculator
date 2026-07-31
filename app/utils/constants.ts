@@ -160,7 +160,7 @@ export const PAYMENT_SCHEDULE_INFO = {
 export const APP_CONFIG = {
   title: '傷病手当金シミュレーター',
   description: '傷病手当金の支給額と受給時期を簡単に計算できるシミュレーターです。',
-  url: process.env.NEXT_PUBLIC_APP_URL || 'https://sickness-benefit-calculator.nexeed-lab.com',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'https://sickness.nexeed-lab.com',
 }
 
 // OGP設定
