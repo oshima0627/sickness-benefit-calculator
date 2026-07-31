@@ -25,20 +25,6 @@ export default function HomePage() {
       const calculationResult = calculateSickness(input)
       setResult(calculationResult)
       setHasCalculated(true)
-      
-      // Google Analytics イベント送信（クライアントサイドでのみ実行）
-      if (typeof window !== 'undefined') {
-        // useEffect や setTimeout を使用してハイドレーション後に実行
-        setTimeout(() => {
-          if ((window as any).gtag) {
-            ;(window as any).gtag('event', 'calculate', {
-              event_category: 'engagement',
-              event_label: 'sickness_benefit_calculation',
-              value: input.salary,
-            })
-          }
-        }, 0)
-      }
     } catch (error) {
       console.error('計算エラー:', error)
       setResult(null)

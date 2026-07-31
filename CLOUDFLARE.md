@@ -59,10 +59,9 @@ Cloudflare 側では「ビルド用の環境変数」として設定してくだ
 | 変数名 | 用途 | 例 |
 | --- | --- | --- |
 | `NEXT_PUBLIC_APP_URL` | canonical URL / OGP の URL | `https://sickness-benefit-calculator.nexeed-lab.com` |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 の測定ID | `G-XXXXXXXXXX` |
 | `NEXT_PUBLIC_GOOGLE_VERIFICATION` | Search Console 所有権確認 | （任意） |
 
-未設定でもビルドは通ります（GA タグは出力されません）。
+どちらも任意です。未設定でもビルドは通ります。
 
 ---
 
@@ -79,12 +78,14 @@ Cloudflare 側では「ビルド用の環境変数」として設定してくだ
 
 ## 5. アクセス解析について
 
-Vercel にデプロイしていた際の `@vercel/analytics` は Cloudflare 上では動作しない
-（`/_vercel/insights/*` が 404 になる）ため削除しました。
-アクセス計測は `NEXT_PUBLIC_GA_ID` による Google Analytics 4 を利用してください。
+現在このサイトはアクセス解析を一切組み込んでいません。
 
-Cloudflare Web Analytics を併用する場合は、ダッシュボードで発行される beacon
-スクリプトを `app/layout.tsx` の `<head>` に追加します。
+- Vercel にデプロイしていた際の `@vercel/analytics` は Cloudflare 上では動作しない
+  （`/_vercel/insights/*` が 404 になる）ため削除しました。
+- Google Analytics 4（gtag）も削除しました。
+
+計測を再開する場合は Cloudflare Web Analytics が使えます。ダッシュボードで発行される
+beacon スクリプトを `app/layout.tsx` の `<head>` に追加してください（Cookie 不要）。
 
 ---
 

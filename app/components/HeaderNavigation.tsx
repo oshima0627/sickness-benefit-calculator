@@ -63,31 +63,18 @@ export default function HeaderNavigation({
     }
   }, [currentSite])
 
-  const handleNavigation = useCallback((url: string, targetSite: string) => {
-    // Google Analytics tracking
-    try {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'site_navigation', {
-          'event_category': 'Navigation',
-          'event_label': `${currentSite}_to_${targetSite}`
-        })
-      }
-    } catch (error) {
-      console.log('Analytics tracking failed:', error)
-    }
-    
-    // Navigate to target URL
+  const handleNavigation = useCallback((url: string) => {
     if (typeof window !== 'undefined') {
       window.open(url, '_blank', 'noopener,noreferrer')
     }
-  }, [currentSite])
+  }, [])
 
   return (
     <div className="header-nav">
       {navigationConfig.map((target) => (
         <button 
           key={target.site}
-          onClick={() => handleNavigation(target.url, target.site)}
+          onClick={() => handleNavigation(target.url)}
           className="header-nav-button"
           type="button"
           aria-label={`${target.label}シミュレーターに移動`}

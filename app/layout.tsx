@@ -91,24 +91,6 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap&subset=japanese"
         />
-        {APP_CONFIG.gaId && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${APP_CONFIG.gaId}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${APP_CONFIG.gaId}');
-                `,
-              }}
-            />
-          </>
-        )}
       </head>
       <body>
         <div className="app">
